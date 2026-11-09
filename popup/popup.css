@@ -67,6 +67,22 @@ body {
   color: var(--text-muted);
 }
 
+.open-tab-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.open-tab-btn:hover {
+  color: var(--text-main);
+  border-color: var(--accent);
+}
+
 .badge-offline {
   font-size: 10px;
   text-transform: uppercase;

@@ -276,3 +276,11 @@ async function convertToPlainText(file) {
   const text = await file.text();
   return new Blob([text], { type: 'text/plain' });
 }
+
+// Open in Full Tab
+const openTabBtn = document.getElementById('open-tab-btn');
+if (openTabBtn) {
+  openTabBtn.addEventListener('click', () => {
+    chrome.tabs.create({ url: chrome.runtime.getURL('app/index.html') });
+  });
+}
