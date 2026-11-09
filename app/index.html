@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AirConvert - In-Browser File Converter</title>
+  <title>AirConvert - 100% In-Browser File Converter & Compressor</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,12 +13,12 @@
       <div class="logo-group">
         <div class="logo-badge">⚡</div>
         <div>
-          <h1 class="title">AirConvert</h1>
-          <p class="subtitle">100% In-Browser & Private File Converter</p>
+          <h1 class="title">AirConvert Studio</h1>
+          <p class="subtitle">Convert & Compress Any File Locally in Your Browser</p>
         </div>
       </div>
       <div class="header-badges">
-        <span class="badge-offline">Offline Active</span>
+        <span class="badge-offline">100% Private & Offline</span>
       </div>
     </header>
 
@@ -31,7 +31,7 @@
                 d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
         </svg>
         <p class="drop-text">Drag & drop your file or <span class="highlight">browse</span></p>
-        <p class="drop-hint">Supports Images, Documents, Data (JSON/CSV), Text</p>
+        <p class="drop-hint">Supports Images (PNG, JPEG, WebP), DOCX, PPTX, PDF, CSV, JSON</p>
       </div>
 
       <!-- File Details (Hidden Initially) -->
@@ -47,14 +47,14 @@
     <!-- Conversion Controls -->
     <div class="controls-panel hidden" id="controls-panel">
       <div class="select-group">
-        <label for="target-format" class="label">Convert to:</label>
+        <label for="target-format" class="label">Choose Action / Output Format:</label>
         <select id="target-format" class="select-box">
           <!-- Populated dynamically based on input file -->
         </select>
       </div>
 
       <button id="convert-btn" class="convert-btn">
-        <span>Convert Now</span>
+        <span>Convert / Process Now</span>
         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
         </svg>
@@ -64,14 +64,14 @@
     <!-- Progress / Result Status -->
     <div class="status-panel hidden" id="status-panel">
       <div class="status-header">
-        <span id="status-text" class="status-text">Converting...</span>
+        <span id="status-text" class="status-text">Processing...</span>
         <span id="status-percent" class="status-percent">0%</span>
       </div>
       <div class="progress-bar-bg">
         <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
       </div>
       <div id="result-actions" class="result-actions hidden">
-        <a id="download-btn" class="download-btn" download>Download Converted File</a>
+        <a id="download-btn" class="download-btn" download>Download Result</a>
       </div>
     </div>
 
@@ -81,10 +81,13 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
               d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
       </svg>
-      <span>Zero files uploaded. Converted 100% client-side in your browser.</span>
+      <span>Zero cloud uploads. All conversions and compressions happen inside your browser memory.</span>
     </footer>
   </div>
 
+  <script src="../libs/jszip.min.js"></script>
+  <script src="../libs/pdf-lib.min.js"></script>
+  <script src="../scripts/engine.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
