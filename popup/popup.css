@@ -19,17 +19,24 @@
 }
 
 body {
-  width: 380px;
+  width: 100%;
+  min-height: 100vh;
   background-color: var(--bg-primary);
   color: var(--text-main);
-  padding: 16px;
+  padding: 20px;
   user-select: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 1;
+  max-width: 440px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Header */
@@ -57,7 +64,7 @@ body {
 }
 
 .title {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: -0.3px;
 }
@@ -72,15 +79,17 @@ body {
   border: 1px solid var(--border);
   color: var(--text-muted);
   border-radius: 8px;
-  padding: 6px;
+  padding: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.15s ease;
 }
 .open-tab-btn:hover {
   color: var(--text-main);
   border-color: var(--accent);
+  background: var(--accent-light);
 }
 
 .badge-offline {
@@ -100,13 +109,13 @@ body {
   background-color: var(--bg-card);
   border: 2px dashed var(--border);
   border-radius: 12px;
-  padding: 24px 16px;
+  padding: 32px 16px;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.drop-zone.dragover {
+.drop-zone:hover, .drop-zone.dragover {
   border-color: var(--accent);
   background-color: var(--accent-light);
 }
@@ -122,14 +131,14 @@ body {
 }
 
 .upload-icon {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   color: var(--accent);
   margin-bottom: 8px;
 }
 
 .drop-text {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   margin-bottom: 4px;
 }
@@ -151,7 +160,7 @@ body {
   justify-content: space-between;
   background-color: var(--bg-card-hover);
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 10px 14px;
 }
 
 .file-info-row {
@@ -167,7 +176,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 260px;
+  max-width: 280px;
 }
 
 .file-size {
@@ -179,9 +188,9 @@ body {
   background: transparent;
   border: none;
   color: var(--text-muted);
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
-  padding: 4px;
+  padding: 4px 8px;
   border-radius: 4px;
 }
 
@@ -213,7 +222,7 @@ body {
   color: var(--text-main);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 10px;
+  padding: 11px;
   font-size: 13px;
   outline: none;
   cursor: pointer;
@@ -232,7 +241,7 @@ body {
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 12px;
+  padding: 13px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -268,7 +277,7 @@ body {
 
 .progress-bar-bg {
   width: 100%;
-  height: 6px;
+  height: 7px;
   background-color: var(--bg-card);
   border-radius: 4px;
   overflow: hidden;
@@ -287,7 +296,7 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  padding: 10px;
+  padding: 12px;
   font-size: 13px;
   font-weight: 600;
   margin-top: 6px;
@@ -305,7 +314,8 @@ body {
   font-size: 10px;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
-  padding-top: 12px;
+  padding-top: 14px;
+  margin-top: auto;
 }
 
 .shield-icon {
