@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "AirConvert - 100% In-Browser File Converter",
-  "version": "1.0.0",
-  "description": "Convert documents, images, and media locally in your browser. Zero cloud uploads, 100% private.",
+  "version": "1.2.0",
+  "description": "Convert documents, office files (DOCX, PPTX, PDF), images, and media locally in your browser. Zero cloud uploads, 100% private.",
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
@@ -19,5 +19,13 @@
   "permissions": [
     "storage",
     "downloads"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "libs/pdf.worker.min.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
   ]
 }
